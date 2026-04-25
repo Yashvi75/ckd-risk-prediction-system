@@ -1,1 +1,1 @@
-web: cd ckd_web && gunicorn ckd_web.wsgi --bind 0.0.0.0:$PORT
+web: gunicorn ckd_web.wsgi --chdir ckd_web --bind 0.0.0.0:$PORT
