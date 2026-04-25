@@ -1,64 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>CKD Prediction</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
 
-<h2>CKD Risk Prediction</h2>
+<body class="bg-light">
 
-<form method="post">
-    {% csrf_token %}
+<div class="container mt-5">
 
-    <h3>Mandatory Inputs</h3>
+    <div class="card shadow p-4">
+        <h2 class="text-center mb-4">CKD Risk Prediction</h2>
 
-    <label>Hemoglobin (g/dL):</label>
-    <input type="number" step="any" name="hemo" required><br><br>
+        <form method="post">
+            {% csrf_token %}
 
-    <label>Specific Gravity:</label>
-    <input type="number" step="any" name="sg" required><br><br>
+            <h5 class="text-danger">Mandatory Inputs</h5>
 
-    <label>Hypertension:</label>
-    <select name="htn" required>
-        <option value="">Select</option>
-        <option value="0">No</option>
-        <option value="1">Yes</option>
-    </select><br><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="form-label">Hemoglobin</label>
+                    <input type="number" step="any" name="hemo" class="form-control" required>
+                </div>
 
-    <label>Packed Cell Volume:</label>
-    <input type="number" step="any" name="pcv" required><br><br>
+                <div class="col-md-6">
+                    <label class="form-label">Specific Gravity</label>
+                    <input type="number" step="any" name="sg" class="form-control" required>
+                </div>
+            </div>
 
-    <h3>Optional Inputs</h3>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <label class="form-label">Hypertension</label>
+                    <select name="htn" class="form-select" required>
+                        <option value="">Select</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
 
-    <label>Appetite:</label>
-    <select name="appet">
-        <option value="">Select</option>
-        <option value="0">Poor</option>
-        <option value="1">Good</option>
-    </select><br><br>
+                <div class="col-md-6">
+                    <label class="form-label">Packed Cell Volume</label>
+                    <input type="number" name="pcv" class="form-control" required>
+                </div>
+            </div>
 
-    <label>Diabetes Mellitus:</label>
-    <select name="dm">
-        <option value="">Select</option>
-        <option value="0">No</option>
-        <option value="1">Yes</option>
-    </select><br><br>
+            <hr>
 
-    <label>Albumin:</label>
-    <input type="number" name="al"><br><br>
+            <h5 class="text-warning">Optional Inputs</h5>
 
-    <label>Blood Glucose Random:</label>
-    <input type="number" name="bgr"><br><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="form-label">Appetite</label>
+                    <select name="appet" class="form-select">
+                        <option value="">Select</option>
+                        <option value="0">Poor</option>
+                        <option value="1">Good</option>
+                    </select>
+                </div>
 
-    <label>Red Blood Cell Count:</label>
-    <input type="number" step="any" name="rc"><br><br>
+                <div class="col-md-6">
+                    <label class="form-label">Diabetes Mellitus</label>
+                    <select name="dm" class="form-select">
+                        <option value="">Select</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
+            </div>
 
-    <label>Blood Urea:</label>
-    <input type="number" name="bu"><br><br>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <label class="form-label">Albumin</label>
+                    <input type="number" name="al" class="form-control">
+                </div>
 
-    <button type="submit">Predict</button>
+                <div class="col-md-6">
+                    <label class="form-label">Blood Glucose Random</label>
+                    <input type="number" name="bgr" class="form-control">
+                </div>
+            </div>
 
-</form>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <label class="form-label">Red Blood Cell Count</label>
+                    <input type="number" step="any" name="rc" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Blood Urea</label>
+                    <input type="number" name="bu" class="form-control">
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary px-4">Predict</button>
+            </div>
+
+        </form>
+    </div>
+
+</div>
 
 </body>
 </html>
