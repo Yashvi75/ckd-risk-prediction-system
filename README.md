@@ -137,7 +137,38 @@ CKD_Project/
 * Deploy as a clinical decision support tool
 
 ---
+## Advanced Improvements
 
+### Feature Selection
+
+* Reduced feature space using SHAP-based importance
+* Retained top clinical predictors (e.g., hemoglobin, specific gravity, hypertension)
+* Maintained performance while improving interpretability
+
+### Model Calibration
+
+* Applied sigmoid calibration using cross-validation
+* Improved reliability of predicted probabilities for clinical decision-making
+
+### Threshold Optimization
+
+* Evaluated different probability thresholds
+* Demonstrated trade-off between recall and precision
+* Identified thresholds that maximize recall (critical for CKD detection)
+
+### Cross-Validated Evaluation
+
+* Performed 5-fold cross-validation on selected features
+* Achieved stable recall with low variance
+* Confirms robustness of the model
+
+### Key Outcome
+
+* Model remains highly accurate even with reduced features
+* Improved trustworthiness and interpretability
+* Better suited for real-world deployment scenarios
+
+---
 ## Author
 
 Yashvi Vyas
