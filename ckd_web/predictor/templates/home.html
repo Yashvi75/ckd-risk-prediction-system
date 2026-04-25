@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CKD Prediction</title>
+</head>
+<body>
+
+<h2>CKD Risk Prediction</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <h3>Mandatory Inputs</h3>
+
+    <label>Hemoglobin (g/dL):</label>
+    <input type="number" step="any" name="hemo" required><br><br>
+
+    <label>Specific Gravity:</label>
+    <input type="number" step="any" name="sg" required><br><br>
+
+    <label>Hypertension:</label>
+    <select name="htn" required>
+        <option value="">Select</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+    </select><br><br>
+
+    <label>Packed Cell Volume:</label>
+    <input type="number" step="any" name="pcv" required><br><br>
+
+    <h3>Optional Inputs</h3>
+
+    <label>Appetite:</label>
+    <select name="appet">
+        <option value="">Select</option>
+        <option value="0">Poor</option>
+        <option value="1">Good</option>
+    </select><br><br>
+
+    <label>Diabetes Mellitus:</label>
+    <select name="dm">
+        <option value="">Select</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+    </select><br><br>
+
+    <label>Albumin:</label>
+    <input type="number" name="al"><br><br>
+
+    <label>Blood Glucose Random:</label>
+    <input type="number" name="bgr"><br><br>
+
+    <label>Red Blood Cell Count:</label>
+    <input type="number" step="any" name="rc"><br><br>
+
+    <label>Blood Urea:</label>
+    <input type="number" name="bu"><br><br>
+
+    <button type="submit">Predict</button>
+
+</form>
+
+</body>
+</html>

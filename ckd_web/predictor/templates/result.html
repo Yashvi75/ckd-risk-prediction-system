@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+
+<h2>Prediction Result</h2>
+
+<h3>{{ result }}</h3>
+
+<p>Risk Probability: <strong>{{ probability }}%</strong></p>
+
+{% if probability > 70 %}
+    <p style="color:red;">High Risk! - Immediate medical consultation recommended</p>
+{% elif probability > 40 %}
+    <p style="color:orange;">Moderate Risk - Further tests advised</p>
+{% else %}
+    <p style="color:green;">Low Risk</p>
+{% endif %}
+
+<br>
+<a href="/">Try Again</a>
+
+</body>
+</html>
