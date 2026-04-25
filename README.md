@@ -169,6 +169,20 @@ CKD_Project/
 * Better suited for real-world deployment scenarios
 
 ---
+
+## Live Demo
+
+The application is deployed using Streamlit and can be accessed here:
+
+https://ckd-predictor.streamlit.app
+
+### Features:
+
+* Real-time CKD prediction
+* User-friendly interface
+* Calibrated ML model
+* Risk probability output
+
 ## Author
 
 Yashvi Vyas
