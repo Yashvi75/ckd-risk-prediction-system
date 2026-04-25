@@ -93,7 +93,7 @@ These features align with clinical understanding of CKD, improving trust in mode
 
 ---
 
-##️ Critical Discussion
+## Critical Discussion
 
 Although the model achieved perfect performance on the test dataset, this result should be interpreted cautiously.
 
@@ -138,7 +138,7 @@ CKD_Project/
 
 ---
 
-##‍ Author
+## Author
 
 Yashvi Vyas
 
