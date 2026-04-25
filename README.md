@@ -12,3 +12,9 @@ Build a machine learning model to predict CKD using clinical parameters.
 ## Setup
 ```bash
 pip install -r requirements.txt
+
+## EDA Summary
+- Dataset contains significant missing values
+- Presence of inconsistent entries like '?' and '\t?'
+- Some numeric columns stored as object
+- Hemoglobin and serum creatinine show strong predictive patterns
